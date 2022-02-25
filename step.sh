@@ -4,7 +4,7 @@ set -ex
 #echo "This is the value specified for the input 'example_step_input': "
 echo "Running saucectl"
 
-saucectl run --config ${sauce_config_yml}
+saucectl run --config ${sauce_config_yml} --fail-fast --verbose
 
 #
 # --- Export Environment Variables for other Steps:
