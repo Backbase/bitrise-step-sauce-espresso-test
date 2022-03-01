@@ -60,8 +60,8 @@ inputs:
         More info on how to configure your espresso tests here: https://docs.saucelabs.com/mobile-apps/automated-testing/espresso-xcuitest/espresso/
       is_expand: true
       is_required: true
-  - saucectl_run_options:
-    opts: "--fail-fast --verbose"
+  - saucectl_run_options: "--fail-fast --verbose"
+    opts:
       title: "Extra commandline options to pass to `saucectl run` command."
       summary: "Extra commandline options to pass to `saucectl run` command."
       description: |
