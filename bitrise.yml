@@ -40,7 +40,7 @@ workflows:
           file if you would not specify another value.
         run_if: true
         inputs:
-        - example_step_input: Example Step Input's value
+        - sauce_config_yml: $CONFIG_YML
     - script:
         inputs:
         - content: |

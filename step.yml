@@ -50,17 +50,25 @@ toolkit:
     entry_file: step.sh
 inputs:
   - sauce_config_yml:
-      opts:
-        title: "The path to your espresso tests configuration file. Usually named config.yml"
-        summary: "The path to your espresso tests configuration file. Usually named config.yml"
-        description: |
-          You can use the `$BITRISE_STEP_SOURCE_DIR/sauceapp-debug.apk` as the app apk needed in teh config.yml. That app apk is provided in this bitrise step.
-          The sauceapp-debug.apk is an "empty app" containing only espresso-accessibility, fragment, and fragmentn-test libraries. Those are needed if you are testing a library module that runs tests with "launchFragmentInContainer" funcion.
-          The testApk needed in the config.yml can be created by running `./gradlew :<your_module_name_here>:assembleDebugAndroidTest`.
-          More info on how to configure your espresso tests here: https://docs.saucelabs.com/mobile-apps/automated-testing/espresso-xcuitest/espresso/
-        is_expand: true
-        is_required: true
-        value_options: []
+    opts:
+      title: "The path to your espresso tests configuration file. Usually named config.yml"
+      summary: "The path to your espresso tests configuration file. Usually named config.yml"
+      description: |
+        You can use the `$BITRISE_STEP_SOURCE_DIR/sauceapp-debug.apk` as the app apk needed in the config.yml. That apk is provided in the source code of this bitrise step.
+        The sauceapp-debug.apk is an "empty app" containing only espresso-accessibility, fragment, and fragmentn-test libraries. Those are needed if you are testing a library module that runs tests with "launchFragmentInContainer" funcion.
+        The testApk needed in the config.yml can be created by running `./gradlew :<your_module_name_here>:assembleDebugAndroidTest`.
+        More info on how to configure your espresso tests here: https://docs.saucelabs.com/mobile-apps/automated-testing/espresso-xcuitest/espresso/
+      is_expand: true
+      is_required: true
+  - saucectl_run_options:
+    opts: "--fail-fast --verbose"
+      title: "Extra commandline options to pass to `saucectl run` command."
+      summary: "Extra commandline options to pass to `saucectl run` command."
+      description: |
+        Extra commandline options to pass to `saucectl run` command. The option `--config` cannot be used, since it is hardcoded in the step already. More info here: https://docs.saucelabs.com/dev/cli/saucectl/run/
+      is_expand: true
+      is_required: false
+#        value_options: []
 #outputs:
 #  - EXAMPLE_STEP_OUTPUT:
 #    opts:
