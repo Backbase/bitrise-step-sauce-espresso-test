@@ -29,10 +29,6 @@ host_os_tags:
 # https://github.com/bitrise-io/bitrise/blob/master/_docs/step-development-guideline.md
 project_type_tags:
   - android
-#   - xamarin
-#   - react-native
-#   - cordova
-#   - ionic
 # Type tags are used for categorizing steps, for easier step discovery in Step Libraries.
 # You can find more information about type tags in the Step Development Guideline:
 # https://github.com/bitrise-io/bitrise/blob/master/_docs/step-development-guideline.md
@@ -42,11 +38,6 @@ is_requires_admin_user: true
 is_always_run: false
 is_skippable: false
 run_if: ""
-#deps:
-#  brew:
-#  - name: saucectl
-#  apt_get:
-#  - name: saucectl
 toolkit:
   bash:
     entry_file: step.sh
@@ -70,13 +61,3 @@ inputs:
         Extra commandline options to pass to `saucectl run` command. The option `--config` cannot be used, since it is hardcoded in the step already. More info here: https://docs.saucelabs.com/dev/cli/saucectl/run/
       is_expand: true
       is_required: false
-#        value_options: []
-#outputs:
-#  - EXAMPLE_STEP_OUTPUT:
-#    opts:
-#      title: "Example Step Output"
-#      summary: Summary. No more than 2-3 sentences.
-#      description: |
-#        Description of this output.
-#
-#        Can be Markdown formatted text.

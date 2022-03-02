@@ -1,12 +1,8 @@
 #!/bin/bash
 set -ex
 
-#echo "This is the value specified for the input 'example_step_input': "
 echo "Installing saucectl"
 sudo sh -c 'curl -L https://saucelabs.github.io/saucectl/install | bash -s -- -b /usr/local/bin'
-echo "current directory"
-pwd
-ls -la
 echo "Running saucectl"
 saucectl run --config $sauce_config_yml $saucectl_run_options 2>&1
 
