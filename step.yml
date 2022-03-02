@@ -45,6 +45,8 @@ run_if: ""
 deps:
   brew:
   - name: saucectl
+  apt_get:
+  - name: saucectl
 toolkit:
   bash:
     entry_file: step.sh
