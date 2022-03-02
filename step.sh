@@ -2,6 +2,9 @@
 set -ex
 
 #echo "This is the value specified for the input 'example_step_input': "
+echo "Installing saucectl"
+npm install saucectl@0.84.0
+
 echo "Running saucectl"
 saucectl run --config $sauce_config_yml $saucectl_run_options 2>&1
 

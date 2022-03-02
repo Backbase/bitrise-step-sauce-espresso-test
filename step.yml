@@ -42,11 +42,11 @@ is_requires_admin_user: true
 is_always_run: false
 is_skippable: false
 run_if: ""
-deps:
-  brew:
-  - name: saucectl
-  apt_get:
-  - name: saucectl
+#deps:
+#  brew:
+#  - name: saucectl
+#  apt_get:
+#  - name: saucectl
 toolkit:
   bash:
     entry_file: step.sh
