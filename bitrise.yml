@@ -40,7 +40,7 @@ workflows:
           file if you would not specify another value.
         run_if: true
         inputs:
-        - sauce_config_yml: $CONFIG_YML
+        - sauce_config_yml: $SAUCE_CONFIG_YML
     - script:
         inputs:
         - content: |
