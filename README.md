@@ -43,7 +43,7 @@ kind: espresso
 sauce:
   region: eu-central-1
 espresso:
-  app: $BITRISE_STEP_SOURCE_DIR/sauceapp-debug.apk #this apk is provided with this bitrise step, but you can pass your own appApk here if you need.
+  app: $BITRISE_STEP_SOURCE_DIR/sauceapp-debug.apk #this apk is provided with this bitrise step, and you are encouraged to use it, but you can pass your own appApk here if you need.
   testApp: $BITRISE_TEST_APK_PATH
 suites:
   - name: "default-test-suite"
@@ -59,7 +59,6 @@ artifacts:
       - junit.xml
     directory: $BITRISE_DEPLOY_DIR/artifacts/
 ```
-
 
 ## How to run this step locally
 
@@ -103,3 +102,5 @@ envs:
   * direct git URL format: instead of `- original-step-id:` use `- git::https://github.com/user/step.git@branch:`
   * You can find more example of alternative step referencing at: https://github.com/bitrise-io/bitrise/blob/master/_examples/tutorials/steps-and-workflows/bitrise.yml
 7. Once you're done just commit your changes & create a Pull Request
+
+#### If you want to make changes to `sauceapp-debug.apk`, refer to [this repository](https://github.com/Backbase/sauce-espresso-test-android-app).
